@@ -11,7 +11,22 @@ function App() {
   return (
     <globalContext.Provider
       value={{ state, dispatch }}
-    ></globalContext.Provider>
+    
+      
+
+    >
+      <Router>
+        <Switch>
+          <Route exact path="/">
+
+
+
+          </Route>
+        </Switch>
+    
+    </Router>
+
+    </globalContext.Provider>
   );
 }
 
