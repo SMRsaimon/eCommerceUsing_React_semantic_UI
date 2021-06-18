@@ -34,7 +34,7 @@ const Navigation = () => {
           />
         </Menu.Menu>
         <Menu.Item position="right">
-          <Button style={{ border: "none" }} color="green" basic icon>
+          <Button style={{ border: "none" }} primary basic icon>
             <Icon name="cart plus"></Icon>
             <span
               style={{

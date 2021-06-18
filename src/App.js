@@ -5,7 +5,8 @@ import cartReducer, { initialState } from "./Reducer/reducers/cartReducer";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Navigation from "./components/Navigation/Navigation";
 import { Home } from "./components/Home/Home";
-
+import {Shop} from "./components/Shop/Shop/Shop"
+ 
 export const globalContext = createContext({});
 function App() {
   const [state, dispatch] = useReducer(cartReducer, initialState);
@@ -25,6 +26,7 @@ function App() {
           </Route>
           <Route path="/shop">
             <Navigation />
+            <Shop></Shop>
           </Route>
         </Switch>
       </Router>

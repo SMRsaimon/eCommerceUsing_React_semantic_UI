@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { Card, Grid, Header, Image } from "semantic-ui-react";
+import { Button, Card, Grid, Header, Icon, Image } from "semantic-ui-react";
 import "./Cart.css";
 
 export const Cart = ({ products }) => {
@@ -34,6 +34,13 @@ export const Cart = ({ products }) => {
                 <Header as="h6">Seller: {seller}</Header>
               </div>
             </Grid.Column>
+            <div>
+              <Button icon primary>Buy Now 
+              <Icon name="cart plus"></Icon>
+              
+              </Button>
+              <Button  secondary>View Details</Button>
+            </div>
           </Grid>
         </Card>
       </Grid.Column>
