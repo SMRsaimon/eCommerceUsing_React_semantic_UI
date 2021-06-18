@@ -1,10 +1,18 @@
-import fakeData from "../../eCommerceFakeData/fakeData"
+
 import { DECREMENT, GET_CART_FROM_LOCALSTORAGE, INCREMENT, REMOVE_FROM_CART } from "../actions/type.js";
 import { ADD_TO_CART } from "../actions/type.js";
-import {addToDatabaseCart,getDatabaseCart, removeFromDatabaseCart} from "../../eCommerceFakeData/utilities/databaseManager"
+import {addToDatabaseCart,getDatabaseCart, removeFromDatabaseCart} from "../../LocalStorageFuntion/databaseManager"
+import products from "../../sample_dataset/products.json"
+import catagories from "../../sample_dataset/categories.json"
+import customers from "../../sample_dataset/customers.json"
+
+
 export   const initialState = {
   cart: [],
-  fakeData: fakeData,
+  products:products,
+ 
+   catagories:catagories,
+   customers:customers
  
 };
 
@@ -33,7 +41,7 @@ const cartReducer = (state = initialState, action) => {
       const saveCart = getDatabaseCart()
       const productKeys = Object.keys(saveCart)
       const previousCut = productKeys.map(pdkey => {
-        const product = state.fakeData.find(x => x.key === pdkey)
+        const product = state.products.find(x => x.key === pdkey)
         product.quentity = saveCart[pdkey]
   
         return product

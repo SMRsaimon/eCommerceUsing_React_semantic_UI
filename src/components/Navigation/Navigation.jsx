@@ -8,7 +8,7 @@ const Navigation = () => {
   const { state, dispatch } = useContext(globalContext);
 
   const [activeItem, setActiveItem] = useState("home");
-
+console.log(state.products.products)
   const handleItemClick = (e, { name }) => {
     setActiveItem(name);
   };

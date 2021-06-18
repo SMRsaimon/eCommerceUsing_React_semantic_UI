@@ -1,0 +1,19 @@
+{
+    "users": [
+        {
+            "u_id": 1,
+            "name": "John Doe",
+            "created_at": 1613502882838
+        },
+        {
+            "u_id": 2,
+            "name": "Jane Doe",
+            "created_at": 1613280747172
+        },
+        {
+            "u_id": 3,
+            "name": "Sarah Doe",
+            "created_at": 1613725172795
+        }
+    ]
+}

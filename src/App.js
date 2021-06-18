@@ -18,21 +18,20 @@ function App() {
         <Switch>
           <Route exact path="/">
             <Navigation />
-            <Home/>
+          <Home/> 
             
           </Route>
           <Route path="/home">
             <Navigation />
-            <Home/>
+          <Home/>  
           </Route>
           <Route path="/shop">
             <Navigation />
-            <Shop></Shop>
+          <Shop></Shop>
           </Route>
           <Route path="/product-details/:id">
             <Navigation />
-            <ProductDetails/>
-           
+       <ProductDetails/> 
           </Route>
         </Switch>
       </Router>

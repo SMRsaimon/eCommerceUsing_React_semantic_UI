@@ -4,7 +4,7 @@ import { Button, Card, Grid, GridColumn, Header, Icon, Image } from "semantic-ui
 import "./Cart.css";
 
 export const Cart = ({ products, ProductDetails }) => {
-  const { img, key, name, price, seller } = products;
+  const { product_img, discount,  id, title,description, price } = products;
 
   const center = {
     display: "flex",
@@ -23,16 +23,16 @@ export const Cart = ({ products, ProductDetails }) => {
         <Card  style={{ marginTop: 50, padding: 20 }}>
           <Grid columns={2}>
             <Grid.Column style={center} mobile={15} tablet={ProductDetails?16:8} computer={ProductDetails?16:8}>
-              <Image src={img} />
+              <Image src={product_img} />
             </Grid.Column>
 
             <Grid.Column style={center} mobile={15} tablet={ProductDetails?16:8} computer={ProductDetails?16:8}>
               <div>
                 <Header as={"h4"}>
-                  {ProductDetails ? name : name.slice(0, 40)}...
+                  {title}
                 </Header>
                 <Header size="medium">Price: {price}</Header>
-                <Header as="h6">Seller: {seller}</Header>
+                <Header as="h6">Seller: {discount}</Header>
               </div>
             </Grid.Column>
             <div>
@@ -41,7 +41,7 @@ export const Cart = ({ products, ProductDetails }) => {
                 <Icon name="cart plus"></Icon>
               </Button>
               {!ProductDetails && (
-                <Button as={Link} to={`/product-details/${key}`} secondary>
+                <Button as={Link} to={`/product-details/${id}`} secondary>
                   View Details
                 </Button>
               )}

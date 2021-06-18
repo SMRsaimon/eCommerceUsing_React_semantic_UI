@@ -5,7 +5,7 @@ import {Shop} from "../Shop/Shop/Shop"
 export const Home = () => {
     return (
         <>
-        <Shop/>
+     <Shop/>
         
             
         </>

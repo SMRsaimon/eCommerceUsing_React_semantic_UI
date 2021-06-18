@@ -1,0 +1,123 @@
+{
+    "products": [
+        {
+            "id": 1,
+            "title": "Colgate toothpaste 200gm [WHITE]",
+            "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
+            "product_img": "https://images.pexels.com/photos/3489130/pexels-photo-3489130.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260",
+            "discount": 0,
+            "price": 470,
+            "categories": [1, 2],
+            "created_at": 1613502882838,
+            "reviews": [
+                {
+                    "id": 1,
+                    "u_id": 2,
+                    "rating": 3.0,
+                    "comment": "Average product"
+                },
+                {
+                    "id": 2,
+                    "u_id": 2,
+                    "rating": 5.0,
+                    "comment": "Best thing I ever bought!"
+                }
+            ]
+        },
+        {
+            "id": 2,
+            "title": "Boma Burger Murgi Milon [SPICY]",
+            "description": "Lorem Ipsum is simply dummy text of the 1500s",
+            "product_img": "https://images.pexels.com/photos/1999263/pexels-photo-1999263.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260",
+            "discount": 0,
+            "price": 100,
+            "categories": [1, 2, 4],
+            "created_at": 1613725172795,
+            "reviews": []
+        },
+        {
+            "id": 3,
+            "title": "Fresh Tomatoes 1KG",
+            "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
+            "product_img": "https://images.pexels.com/photos/2600761/pexels-photo-2600761.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260",
+            "discount": 5,
+            "price": 6960,
+            "categories": [2],
+            "created_at": 1413725172795,
+            "reviews": [
+                {
+                    "id": 1,
+                    "u_id": 2,
+                    "rating": 4.0,
+                    "comment": "Average product"
+                },
+                {
+                    "id": 1,
+                    "u_id": 2,
+                    "rating": 3.0,
+                    "comment": "Best thing I ever bought!"
+                }
+            ]
+        },
+        {
+            "id": 4,
+            "title": "Google Play Gift Cards $5",
+            "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
+            "product_img": "https://images.pexels.com/photos/5632364/pexels-photo-5632364.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260",
+            "discount": 0,
+            "price": 5,
+            "categories": [2, 5],
+            "created_at": 1513725172795,
+            "reviews": [
+                {
+                    "id": 1,
+                    "u_id": 2,
+                    "rating": 3.0,
+                    "comment": "Average product"
+                },
+                {
+                    "id": 2,
+                    "u_id": 2,
+                    "rating": 5.0,
+                    "comment": "Best thing I ever bought!"
+                },
+                {
+                    "id": 3,
+                    "u_id": 3,
+                    "rating": 3.0,
+                    "comment": "Worst thing I ever bought!"
+                }
+            ]
+        },
+        {
+            "id": 5,
+            "title": "Call of Duty Black Ops III Delux Edition",
+            "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
+            "product_img": "https://images.pexels.com/photos/5632364/pexels-photo-5632364.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260",
+            "discount": 14,
+            "price": 1100,
+            "categories": [1, 2],
+            "created_at": 1713725172795,
+            "reviews": [
+                {
+                    "id": 1,
+                    "u_id": 2,
+                    "rating": 3.0,
+                    "comment": "Average product"
+                },
+                {
+                    "id": 2,
+                    "u_id": 3,
+                    "rating": 2.3,
+                    "comment": "Best thing I ever bought!"
+                },
+                {
+                    "id": 3,
+                    "u_id": -1,
+                    "rating": 4.0,
+                    "comment": "Best thing I ever bought!"
+                }
+            ]
+        }
+    ]
+}
