@@ -13,7 +13,7 @@ export const Shop = () => {
         <Grid>
           <Grid.Row>
             {state.fakeData.map((pd) => (
-              <Cart products={pd} />
+              <Cart key={pd.key} products={pd} />
             ))}
           </Grid.Row>
         </Grid>
