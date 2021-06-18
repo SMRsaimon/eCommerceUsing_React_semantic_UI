@@ -4,6 +4,7 @@ import { createContext, useReducer } from "react";
 import cartReducer, { initialState } from "./Reducer/reducers/cartReducer";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Navigation from "./components/Navigation/Navigation";
+import { Home } from "./components/Home/Home";
 
 export const globalContext = createContext({});
 function App() {
@@ -15,9 +16,12 @@ function App() {
         <Switch>
           <Route exact path="/">
             <Navigation />
+            <Home/>
+            
           </Route>
           <Route path="/home">
             <Navigation />
+            <Home/>
           </Route>
           <Route path="/shop">
             <Navigation />
