@@ -15,28 +15,38 @@ const Navigation = () => {
 
   return (
     <>
-      <Menu tabular attached="top">
+      <Menu style={{ background: "rgb(236 230 230)" }} tabular attached="top">
         <Menu.Item position="left" name="Logo" />
         <Menu.Menu>
           <Menu.Item
-          as={Link}
-          to="/home"
+            as={Link}
+            to="/home"
             name="home"
             active={activeItem === "home"}
             onClick={handleItemClick}
           />
           <Menu.Item
-          as={Link}
-          to="/shop"
+            as={Link}
+            to="/shop"
             name="Shop"
             active={activeItem === "Shop"}
             onClick={handleItemClick}
           />
         </Menu.Menu>
         <Menu.Item position="right">
-          <Button style={{border:"none"}} color="green" basic icon>
+          <Button style={{ border: "none" }} color="green" basic icon>
             <Icon name="cart plus"></Icon>
-            <span style={{fontSize:20, fontWeight:"bold", position:"relative", top:-8, color:"black"}}>4</span>
+            <span
+              style={{
+                fontSize: 20,
+                fontWeight: "bold",
+                position: "relative",
+                top: -8,
+                color: "black",
+              }}
+            >
+              {state.cart.length}
+            </span>
           </Button>
         </Menu.Item>
 
