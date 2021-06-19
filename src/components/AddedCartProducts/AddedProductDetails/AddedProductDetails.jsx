@@ -7,6 +7,14 @@ import "./AddedProductDetails.css"
 const AddedProductDetails = ({product}) => {
     const { product_img, discount,  id, title,description, price,quentity } = product;
  
+
+    let  productPrice=price*quentity
+    if(discount !== 0){
+        const   ProductDiscount =(productPrice*discount)/100
+        productPrice=productPrice-ProductDiscount
+    }
+ 
+
     const {state,dispatch}=useContext(globalContext)
 
     return (
@@ -30,7 +38,7 @@ const AddedProductDetails = ({product}) => {
              </Grid.Column>
              <Grid.Column textAlign={"center"} mobile={16} tablet={6} computer={6} >
              <Container>
-                  {price} x {quentity}= {price*quentity}
+                  {price} x {quentity}= {(productPrice)}
                 </Container>
 
                 <Container className={"increment-decrement-button-container"}>
