@@ -1,15 +1,22 @@
-import React from "react";
+import React, { useContext, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { Button, Card, Grid, GridColumn, Header, Icon, Image } from "semantic-ui-react";
+import { globalContext } from "../../../App";
+import { addToCart, getDataFromLocalStorage } from "../../../Reducer/actions/CartAction";
 import "./Cart.css";
 
 export const Cart = ({ products, ProductDetails }) => {
   const { product_img, discount,  id, title,description, price } = products;
 
+
+  const {dispatch}=useContext(globalContext)
   const center = {
     display: "flex",
     justifyContent: "center",
   };
+  useEffect(() => {
+    dispatch(getDataFromLocalStorage());
+  }, []);
 
   return (
     <>
@@ -45,7 +52,7 @@ export const Cart = ({ products, ProductDetails }) => {
 
             }
             <div>
-              <Button icon primary>
+              <Button  onClick={()=>dispatch(addToCart(products))}  icon primary>
                 Buy Now
                 <Icon name="cart plus"></Icon>
               </Button>

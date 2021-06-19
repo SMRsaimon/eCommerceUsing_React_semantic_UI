@@ -19,20 +19,22 @@ export   const initialState = {
 const cartReducer = (state = initialState, action) => {
   switch (action.type) {
     case ADD_TO_CART: {
-      const sameProduct = state.cart.find((pd) => pd.key === action.payload.key)
+      const sameProduct = state.cart.find((pd) => pd.id === action.payload.id)
       let count = 1;
       let newCart;
       if (sameProduct) {
+         
         count = action.payload.quentity + 1;
         action.payload.quentity = count;
-        const otherProduct = state.cart.filter(x => x.key !== action.payload.key)
+        const otherProduct = state.cart.filter(x => x.id !== action.payload.id)
         newCart = [...otherProduct, sameProduct]
+        
       } else {
   
         action.payload.quentity = count;
         newCart = [...state.cart, action.payload]
       }
-      addToDatabaseCart(action.payload.key, count)
+      addToDatabaseCart(action.payload.id, count)
      
       return {...state,cart:newCart};
     }
@@ -41,7 +43,7 @@ const cartReducer = (state = initialState, action) => {
       const saveCart = getDatabaseCart()
       const productKeys = Object.keys(saveCart)
       const previousCut = productKeys.map(pdkey => {
-        const product = state.products.find(x => x.key === pdkey)
+        const product = state.products.products.find(x => x.id == pdkey)
         product.quentity = saveCart[pdkey]
   
         return product

@@ -13,6 +13,8 @@ console.log(state.products.products)
     setActiveItem(name);
   };
 
+  console.log(state.cart)
+
   return (
     <>
       <Menu style={{ background: "rgb(236 230 230)" }} tabular attached="top">
