@@ -1,0 +1,19 @@
+.added-single-product-container{
+    margin-bottom: 30px;
+}
+
+@media(max-width:900px){
+
+    .added-single-product-img{
+       height: 160px !important;
+       margin: 0 auto !important;
+    }
+
+
+}
+
+.product-remove-icon{
+    font-size: 32px !important;
+    color: red !important;
+    margin-top: 20px !important;
+}

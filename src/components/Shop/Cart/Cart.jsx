@@ -14,9 +14,7 @@ export const Cart = ({ products, ProductDetails }) => {
     display: "flex",
     justifyContent: "center",
   };
-  useEffect(() => {
-    dispatch(getDataFromLocalStorage());
-  }, []);
+ 
 
   return (
     <>

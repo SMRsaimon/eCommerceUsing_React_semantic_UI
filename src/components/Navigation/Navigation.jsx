@@ -36,7 +36,7 @@ console.log(state.products.products)
           />
         </Menu.Menu>
         <Menu.Item position="right">
-          <Button style={{ border: "none" }} primary basic icon>
+          <Button as={Link} to="/cartAddedProducts" style={{ border: "none" }} primary basic icon>
             <Icon name="cart plus"></Icon>
             <span
               style={{
