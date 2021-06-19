@@ -1,4 +1,88 @@
-.Cart-container{
-    display: flex;
-    justify-content: center;
+
+.Shop-card-container{
+  margin-top: 50px !important;
+  padding: 20px !important;
+  box-shadow: none !important;
+  background-color: rgba(248, 242, 242, 0.63) !important;
+  position: relative;
+
+}
+.Shop-card-container:hover .shop-view-details-button{
+    display: block !important;
+    background-color: white;
+    visibility:initial;
+    transition:all 1s  ease-in-out;
+    
+  }
+
+.shop_page_product_title:hover{
+
+  color: #c96 !important;
+  cursor: pointer;
+}
+.shop_page_product_title{
+
+    color: #666 !important;
+ font-family: 'Poppins';
+ margin-top: -50px !important;
+ display: block;
+}
+.shop-view-details-button{
+
+    background-color: white;
+    padding: 10px 0;
+    /* /* display: none !important; */
+    position: relative; 
+    bottom: 67px;
+    width: 100%;
+    visibility: hidden;
+    color: black;
+    font-weight: 600;
+    
+}
+.shop-view-details-button:hover{
+
+   color: white;
+   background-color: #c96 !important;
+   transition: all .4s ease-in-out;
+}
+
+.add_to_cart_btn{
+
+    text-transform: uppercase !important;
+    color: #333 !important;
+ border: .1rem solid #ebebeb !important;
+    margin-left: 2rem !important;
+    margin-right: 2rem !important;
+    padding-top: .8rem !important;
+    padding-bottom: .8rem !important;
+   background-color: transparent !important;
+    position:absolute !important;
+    bottom: 0 !important;
+   
+    width: 70%;
+}
+.add_to_cart_btn:hover{
+    color: white !important;
+    background-color: #c96 !important;
+    transition: all .4s ease-in-out !important;
+
+}
+
+.discount-container{
+
+    position: absolute !important;
+    top: 45px !important;
+    left: -22px;
+    background-color: rgba(255, 255, 255, 0.411);
+    width: 200px !important;
+    font-weight: 700;
+   
+      
+        -webkit-transform: rotate(311deg);
+        -moz-transform: rotate(311deg);
+        -ms-transform: rotate(311deg);
+        -o-transform: rotate(311deg);
+        transform: rotate(311deg);
+      
 }

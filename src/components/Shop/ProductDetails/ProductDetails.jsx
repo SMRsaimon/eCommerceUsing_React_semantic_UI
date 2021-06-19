@@ -14,11 +14,10 @@ const ProductDetails = () => {
    const product=state.products.products.find(pd=>pd.id==id)
 
 
-
   
     return (
         <Container>
-            <Cart ProductDetails={true} products={product}  />
+            {/* <Cart ProductDetails={true} products={product}  /> */}
             <Comment.Group>
              <Header as='h3' dividing>
       Comments
