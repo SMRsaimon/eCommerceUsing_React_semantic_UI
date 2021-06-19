@@ -32,9 +32,18 @@ export const Cart = ({ products, ProductDetails }) => {
                   {title}
                 </Header>
                 <Header size="medium">Price: {price}</Header>
-                <Header as="h6">Seller: {discount}</Header>
+                <Header color={"green"} as="h3">Discount: {discount}%</Header>
               </div>
             </Grid.Column>
+            {ProductDetails && <Grid.Column mobile={15} tablet={15} computer={15}>
+
+              <Header as={"h5"}>
+                  {description}
+                </Header>
+
+            </Grid.Column>
+
+            }
             <div>
               <Button icon primary>
                 Buy Now
