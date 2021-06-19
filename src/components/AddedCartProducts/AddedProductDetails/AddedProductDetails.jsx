@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { Button, Container, Grid, Header, Icon, Image } from 'semantic-ui-react';
+import { Button, Card, Container, Grid, Header, Icon, Image } from 'semantic-ui-react';
 import { globalContext } from '../../../App';
 import { Decrement, Increment, removeFromCart } from '../../../Reducer/actions/CartAction';
 import "./AddedProductDetails.css"
@@ -9,15 +9,16 @@ const AddedProductDetails = ({product}) => {
  
 
     let  productPrice=price*quentity
-    if(discount !== 0){
-        const   ProductDiscount =(productPrice*discount)/100
-        productPrice=productPrice-ProductDiscount
-    }
+   
  
 
     const {state,dispatch}=useContext(globalContext)
 
     return (
+    
+
+
+     
         <Grid className={"added-single-product-container"}>
              <Grid.Column textAlign={"center"} mobile={16} tablet={4} computer={4} >
 
@@ -52,6 +53,7 @@ const AddedProductDetails = ({product}) => {
              </Grid.Column>
            
         </Grid>
+        
     );
 };
 

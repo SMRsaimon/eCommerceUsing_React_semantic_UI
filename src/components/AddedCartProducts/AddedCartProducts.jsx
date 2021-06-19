@@ -1,9 +1,10 @@
 import React, { useContext, useEffect } from "react";
-import { Grid, Image, Container, Header, Divider } from "semantic-ui-react";
+import { Grid, Container, Divider } from "semantic-ui-react";
 import { globalContext } from "../../App";
 import { getDataFromLocalStorage } from "../../Reducer/actions/CartAction";
 import "./AddedCartProducts.css";
 import AddedProductDetails from "./AddedProductDetails/AddedProductDetails";
+import PriceCalculation from "./PriceCalculation/PriceCalculation";
 
 const AddedCartProducts = () => {
   const { state, dispatch } = useContext(globalContext);
@@ -11,28 +12,27 @@ const AddedCartProducts = () => {
     dispatch(getDataFromLocalStorage());
   }, []);
 
-//   calculate total price with discount 
+  //   calculate total
   let productPrice = state.cart.reduce((total, currentValue) => {
     let totalPrice = total + currentValue.price * currentValue.quentity;
 
     return totalPrice;
   }, 0);
-//   total discount 
-let totalDiscount = state.cart.reduce((total, currentValue) => {
-   let total_discount=0
+  //  calculate  total discount
+  let totalDiscount = state.cart.reduce((total, currentValue) => {
+    let total_discount = 0;
     if (currentValue.discount !== 0) {
-        total_discount= total+ (currentValue.price * currentValue.discount* currentValue.quentity)/100 ;
-        total_discount=total_discount
-     
+      total_discount =
+        total +
+        (currentValue.price * currentValue.discount * currentValue.quentity) /
+          100;
+      total_discount = total_discount;
     }
-    return  total_discount
-
-   
+    return total_discount;
   }, 0);
-  productPrice= productPrice-totalDiscount
+  
 
-
-//   Calculate total quentity 
+  //   Calculate total quentity
   const totalQuentity = state.cart.reduce((total, current) => {
     return total + current.quentity;
   }, 0);
@@ -46,7 +46,7 @@ let totalDiscount = state.cart.reduce((total, currentValue) => {
               My Cart ({state.cart.length}){" "}
             </Container>
             <Container className={"header-product-price"} textAlign="right">
-              Products Price: {productPrice}{" "}
+              Products Price: ${productPrice}
             </Container>
           </Container>
           <Divider />
@@ -55,7 +55,7 @@ let totalDiscount = state.cart.reduce((total, currentValue) => {
           ))}
         </Grid.Column>
         <Grid.Column mobile={16} tablet={8} computer={6} floated="right">
-          <Image src="https://react.semantic-ui.com/images/wireframe/paragraph.png" />
+          <PriceCalculation totalDiscount={totalDiscount} productPrice={productPrice} />
         </Grid.Column>
       </Grid>
     </Container>
