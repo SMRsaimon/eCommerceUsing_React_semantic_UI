@@ -1,7 +1,10 @@
 import React, { useContext, useEffect } from "react";
-import { Grid, Container, Divider } from "semantic-ui-react";
+import { Grid, Container, Divider, Button } from "semantic-ui-react";
 import { globalContext } from "../../App";
-import { getDataFromLocalStorage } from "../../Reducer/actions/CartAction";
+import {
+  ClearCart,
+  getDataFromLocalStorage,
+} from "../../Reducer/actions/CartAction";
 import "./AddedCartProducts.css";
 import AddedProductDetails from "./AddedProductDetails/AddedProductDetails";
 import PriceCalculation from "./PriceCalculation/PriceCalculation";
@@ -30,17 +33,31 @@ const AddedCartProducts = () => {
     }
     return total_discount;
   }, 0);
-  
 
   //   Calculate total quentity
   const totalQuentity = state.cart.reduce((total, current) => {
     return total + current.quentity;
   }, 0);
 
+  //   hendel cart clear
+  const hendelCartClear = () => {
+    dispatch(ClearCart());
+    localStorage.clear();
+  };
+
   return (
     <Container style={{ marginTop: 100 }}>
-      <Grid>
+      <Grid >
         <Grid.Column mobile={16} tablet={8} computer={8} floated="left">
+          {state.cart.length !== 0 && (
+            <Container textAlign="right">
+              <Button color={"red"} onClick={hendelCartClear}>
+                {" "}
+                Clear Cart{" "}
+              </Button>
+            </Container>
+          )}
+
           <Container className={"AddedCartProducts-header"}>
             <Container textAlign="left">
               My Cart ({state.cart.length}){" "}
@@ -55,7 +72,14 @@ const AddedCartProducts = () => {
           ))}
         </Grid.Column>
         <Grid.Column mobile={16} tablet={8} computer={6} floated="right">
-          <PriceCalculation totalDiscount={totalDiscount} productPrice={productPrice} />
+            {state.cart.length !== 0 && 
+           <PriceCalculation
+           totalDiscount={totalDiscount}
+           productPrice={productPrice}
+         />
+
+            }
+         
         </Grid.Column>
       </Grid>
     </Container>

@@ -1,5 +1,5 @@
 
-import { DECREMENT, GET_CART_FROM_LOCALSTORAGE, INCREMENT, REMOVE_FROM_CART } from "../actions/type.js";
+import { CLEAR_CART, DECREMENT, GET_CART_FROM_LOCALSTORAGE, INCREMENT, REMOVE_FROM_CART } from "../actions/type.js";
 import { ADD_TO_CART } from "../actions/type.js";
 import {addToDatabaseCart,getDatabaseCart, removeFromDatabaseCart} from "../../LocalStorageFuntion/databaseManager"
 import products from "../../sample_dataset/products.json"
@@ -86,6 +86,12 @@ const cartReducer = (state = initialState, action) => {
      allProduct.splice(productIndex, 1, product)
       
       return {...state,cart:allProduct};
+    }
+
+    case CLEAR_CART:{
+      return {...state,cart:[]};
+
+
     }
  
     default: {

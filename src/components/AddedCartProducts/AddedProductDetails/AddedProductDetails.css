@@ -1,5 +1,6 @@
 .added-single-product-container{
-    margin-bottom: 30px;
+    margin-bottom: 30px !important;
+    background-color: rgb(238, 233, 233);
 }
 
 @media(max-width:900px){

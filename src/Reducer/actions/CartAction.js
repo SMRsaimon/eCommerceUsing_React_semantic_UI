@@ -1,4 +1,4 @@
-import { ADD_TO_CART, DECREMENT, GET_CART_FROM_LOCALSTORAGE, INCREMENT, REMOVE_FROM_CART } from "./type.js"
+import { ADD_TO_CART, CLEAR_CART, DECREMENT, GET_CART_FROM_LOCALSTORAGE, INCREMENT, REMOVE_FROM_CART } from "./type.js"
 
 
 
@@ -34,6 +34,12 @@ export const Decrement  = (payload) => {
     return {
         type: DECREMENT,
         payload
+    }
+}
+export const ClearCart  = () => {
+    return {
+        type:CLEAR_CART ,
+       
     }
 }
 

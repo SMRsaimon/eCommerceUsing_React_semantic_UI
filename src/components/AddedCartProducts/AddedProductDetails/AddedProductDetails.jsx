@@ -18,8 +18,10 @@ const AddedProductDetails = ({product}) => {
     
 
 
+
      
         <Grid className={"added-single-product-container"}>
+           
              <Grid.Column textAlign={"center"} mobile={16} tablet={4} computer={4} >
 
              <Image className={"added-single-product-img"} src={product_img} size='medium' rounded />
@@ -53,6 +55,8 @@ const AddedProductDetails = ({product}) => {
              </Grid.Column>
            
         </Grid>
+
+       
         
     );
 };
