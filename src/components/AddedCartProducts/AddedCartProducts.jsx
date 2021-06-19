@@ -7,7 +7,13 @@ import AddedProductDetails from "./AddedProductDetails/AddedProductDetails";
 const AddedCartProducts = () => {
 
     const {state,dispatch}=useContext(globalContext)
-
+    let productPrice = state.cart.reduce((total, currentValue) => {
+        return total + currentValue.price * currentValue.quentity;
+      }, 0);
+    
+      const totalQuentity = state.cart.reduce((total, current) => {
+        return total + current.quentity;
+      }, 0);
    
 
 
@@ -18,7 +24,7 @@ const AddedCartProducts = () => {
         <Grid.Column mobile={16} tablet={8} computer={8} floated="left">
           <Container className={"AddedCartProducts-header"}>
            <Container textAlign='left'>My Cart ({state.cart.length})  </Container>
-           <Container className={"header-product-price"} textAlign='right'>Products Price: 340   </Container>
+           <Container className={"header-product-price"} textAlign='right'>Products Price: {productPrice}   </Container>
           </Container>
           <Divider />
           {state.cart.map(pd=>  <AddedProductDetails key={pd.key} product={pd} />)

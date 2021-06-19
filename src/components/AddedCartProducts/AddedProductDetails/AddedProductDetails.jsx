@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 import { Button, Container, Grid, Header, Icon, Image } from 'semantic-ui-react';
 import { globalContext } from '../../../App';
-import { removeFromCart } from '../../../Reducer/actions/CartAction';
+import { Decrement, Increment, removeFromCart } from '../../../Reducer/actions/CartAction';
 import "./AddedProductDetails.css"
 
 const AddedProductDetails = ({product}) => {
@@ -34,10 +34,11 @@ const AddedProductDetails = ({product}) => {
                 </Container>
 
                 <Container className={"increment-decrement-button-container"}>
-                   <Button>+ </Button>
+                   <Button onClick={()=>dispatch(Increment(id))}>+ </Button>
                    <Button>{quentity} </Button>
-                   <Button>- </Button>
+                   <Button onClick={()=>dispatch(Decrement(id))}>- </Button>
                 </Container>
+               
                  
    
              </Grid.Column>

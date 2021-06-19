@@ -10,7 +10,6 @@ import customers from "../../sample_dataset/customers.json"
 export   const initialState = {
   cart: [],
   products:products,
- 
    catagories:catagories,
    customers:customers
  
@@ -28,6 +27,8 @@ const cartReducer = (state = initialState, action) => {
         action.payload.quentity = count;
         const otherProduct = state.cart.filter(x => x.id !== action.payload.id)
         newCart = [...otherProduct, sameProduct]
+
+        alert("product already added on your cart")
         
       } else {
   
@@ -61,11 +62,11 @@ const cartReducer = (state = initialState, action) => {
     case INCREMENT: {
           
       const allProduct = [...state.cart]
-      const productIndex = allProduct.findIndex((x) => x.key === action.payload)
+      const productIndex = allProduct.findIndex((x) => x.id === action.payload)
       const product=allProduct[productIndex]
           
       product.quentity ++;
-        
+       
      allProduct.splice(productIndex, 1, product)
       
       return {...state,cart:allProduct};
@@ -74,7 +75,7 @@ const cartReducer = (state = initialState, action) => {
 
      
       const allProduct = [...state.cart]
-      const productIndex = allProduct.findIndex((x) => x.key === action.payload)
+      const productIndex = allProduct.findIndex((x) => x.id === action.payload)
       const product=allProduct[productIndex]
 
       if(product.quentity>1){
