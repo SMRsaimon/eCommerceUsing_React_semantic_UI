@@ -17,7 +17,7 @@ const AddedCartProducts = () => {
       <Grid>
         <Grid.Column mobile={16} tablet={8} computer={8} floated="left">
           <Container className={"AddedCartProducts-header"}>
-           <Container textAlign='left'>My Cart (1)  </Container>
+           <Container textAlign='left'>My Cart ({state.cart.length})  </Container>
            <Container className={"header-product-price"} textAlign='right'>Products Price: 340   </Container>
           </Container>
           <Divider />

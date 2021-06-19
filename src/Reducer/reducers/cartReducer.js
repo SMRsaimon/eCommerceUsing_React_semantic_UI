@@ -53,7 +53,7 @@ const cartReducer = (state = initialState, action) => {
     }
     case REMOVE_FROM_CART: {
 
-      const newCart=state.cart.filter(pd=>pd.key !== action.payload)
+      const newCart=state.cart.filter(pd=>pd.id !== action.payload)
       removeFromDatabaseCart( action.payload)
     
       return {...state,cart:newCart};
