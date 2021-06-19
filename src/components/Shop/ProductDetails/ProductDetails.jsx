@@ -13,7 +13,7 @@ const ProductDetails = () => {
    
    const product=state.products.products.find(pd=>pd.id==id)
 
-console.log(state.customers.users)
+
 
   
     return (

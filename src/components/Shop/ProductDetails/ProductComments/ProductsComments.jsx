@@ -1,13 +1,13 @@
 import React, { useContext } from 'react';
-import { Button, Comment, Form, Header } from 'semantic-ui-react';
+import { Button, Comment, Form, Rating } from 'semantic-ui-react';
 import { globalContext } from '../../../../App';
 
 const ProductsComments = ({comments}) => {
     const {state}=useContext(globalContext)
    
-    const {comment,id,rating,u_id}=comments
+    const {comment,rating,u_id}=comments
     const user=state.customers.users.find(ur=>ur.u_id==u_id)
-    console.log(user)
+    
 
 
     return (
@@ -19,7 +19,7 @@ const ProductsComments = ({comments}) => {
          <Comment.Content>
         <Comment.Author>{user?.name}</Comment.Author>
         <Comment.Metadata>
-          {/* <div>1 day ago</div> */}
+        <Rating maxRating={5} defaultRating={rating} icon='star' size='large' disabled />
         </Comment.Metadata>
         <Comment.Text>
           <p>
