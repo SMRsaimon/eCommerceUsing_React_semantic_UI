@@ -5,11 +5,11 @@ import cartReducer, { initialState } from "./Reducer/reducers/cartReducer";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Navigation from "./components/Navigation/Navigation";
 import { Home } from "./components/Home/Home";
-import {Shop} from "./components/Shop/Shop/Shop"
+import { Shop } from "./components/Shop/Shop/Shop";
 import ProductDetails from "./components/Shop/ProductDetails/ProductDetails";
 import AddedCartProducts from "./components/AddedCartProducts/AddedCartProducts";
 import { getDataFromLocalStorage } from "./Reducer/actions/CartAction";
- 
+
 export const globalContext = createContext({});
 function App() {
   const [state, dispatch] = useReducer(cartReducer, initialState);
@@ -22,24 +22,23 @@ function App() {
         <Switch>
           <Route exact path="/">
             <Navigation />
-          <Home/> 
-            
+            <Home />
           </Route>
           <Route path="/home">
             <Navigation />
-          <Home/>  
+            <Home />
           </Route>
           <Route path="/shop">
             <Navigation />
-          <Shop></Shop>
+            <Shop></Shop>
           </Route>
           <Route path="/product-details/:id">
             <Navigation />
-       <ProductDetails/> 
+            <ProductDetails />
           </Route>
           <Route path="/cartAddedProducts">
             <Navigation />
-       <AddedCartProducts/> 
+            <AddedCartProducts />
           </Route>
         </Switch>
       </Router>

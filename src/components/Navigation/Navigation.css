@@ -1,0 +1,20 @@
+.cart-icon{
+   
+    
+}
+.ui.basic.primary.button, .ui.basic.primary.buttons .button {
+    box-shadow: none !important;
+   font-size: 18px !important ;
+}
+.cart-icon-length{
+
+    font-size: 18px;
+    font-weight: bold;
+    position: relative;
+    top: -8px;
+    left: 5px;
+    color: white;
+    background-color: rgb(0 142 255 / 77%);
+    padding: 1px 7px;
+    border-radius: 46%;
+}

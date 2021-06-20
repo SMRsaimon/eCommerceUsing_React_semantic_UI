@@ -1,0 +1,55 @@
+.productDetails-product-title {
+    font-weight: 400 !important;
+    font-size: 2.4rem !important;
+    letter-spacing: -.025em !important;
+    margin-bottom: 1.2rem !important;
+    margin-top: -.5rem !important;
+    padding-right: 1rem !important;
+    color: #333333 !important;
+}
+
+.total-review-count{
+
+    color: #cccccc;
+}
+.total-review-count:hover{
+
+    color: #f4f80e;
+}
+.product-detais-product-price{
+
+    font-weight: 400 !important;
+    font-size: 1.6rem !important;
+    line-height: 1.25 !important;
+    color: #c96 !important;
+    margin-bottom: 1.3rem !important;
+    margin-top: 1.3rem !important
+    
+}
+.product-description{
+
+
+    font-size: 1.3rem;
+    font-weight: 300;
+    font-family: 'Poppins';
+    letter-spacing: 0;
+    color: #777;
+}
+.viewDetails_add_to_cart_btn{
+
+     
+     margin-top: 40px !important;
+     padding: 1rem 1.5rem;
+    max-width: 198px !important;
+    min-width: 150px !important;
+    color: #c96 !important;
+    border: 1px solid #c96 !important;
+    background-color: transparent !important;
+}
+.viewDetails_add_to_cart_btn:hover{
+
+
+   color: white !important;
+   border: none !important;
+   background-color: #c96 !important;
+}

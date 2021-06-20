@@ -36,16 +36,10 @@ console.log(state.products.products)
           />
         </Menu.Menu>
         <Menu.Item position="right">
-          <Button as={Link} to="/cartAddedProducts" style={{ border: "none" }} primary basic icon>
+          <Button as={Link} to="/cartAddedProducts" className={"cart-icon"} primary basic icon>
             <Icon name="cart plus"></Icon>
-            <span
-              style={{
-                fontSize: 20,
-                fontWeight: "bold",
-                position: "relative",
-                top: -8,
-                color: "black",
-              }}
+            <span className={"cart-icon-length"}
+              
             >
               {state.cart.length}
             </span>
@@ -53,10 +47,10 @@ console.log(state.products.products)
         </Menu.Item>
 
         <Menu.Item>
-          <Button color="red" basic icon>
+          {/* <Button color="red" basic icon>
             <Icon name="log out"></Icon>
             Logout
-          </Button>
+          </Button> */}
         </Menu.Item>
       </Menu>
     </>
