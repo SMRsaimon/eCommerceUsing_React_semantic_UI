@@ -46,32 +46,32 @@ const AddedCartProducts = () => {
   };
 
   return (
-    <Container style={{ marginTop: 100 }}>
+    <Container style={{ marginTop: 70 }}>
       <Grid >
         <Grid.Column mobile={16} tablet={8} computer={8} floated="left">
           {state.cart.length !== 0 && (
-            <Container textAlign="right">
+            <Container style={{marginBottom: 25}} textAlign="right">
               <Button color={"red"} onClick={hendelCartClear}>
                
                 Clear Cart
               </Button>
             </Container>
           )}
-
+                <Divider />
           <Container className={"AddedCartProducts-header"}>
-            <Container textAlign="left">
+            <span >
               My Cart ({state.cart.length})
-            </Container>
-            <Container className={"header-product-price"} textAlign="right">
+            </span>
+            <span className={"header-product-price"} >
               Products Price: ${productPrice}
-            </Container>
+            </span>
           </Container>
           <Divider />
           {state.cart.map((pd) => (
             <AddedProductDetails key={pd.key} product={pd} />
           ))}
         </Grid.Column>
-        <Grid.Column style={{marginLeft:"auto", marginRight:"auto"}} mobile={16} tablet={8} computer={6} floated="right">
+        <Grid.Column style={{marginLeft:"auto", marginRight:"autos"}} mobile={16} tablet={8} computer={6} floated="right">
             {state.cart.length !== 0 && 
            <PriceCalculation
            totalDiscount={totalDiscount}
