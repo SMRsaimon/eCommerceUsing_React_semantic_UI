@@ -46,7 +46,7 @@ const AddedCartProducts = () => {
   };
 
   return (
-    <Container style={{ marginTop: 70 }}>
+    <Container style={{ marginTop: 50 }}>
       <Grid >
         <Grid.Column mobile={16} tablet={8} computer={8} floated="left">
           {state.cart.length !== 0 && (
