@@ -50,13 +50,14 @@
 .add_to_cart_btn{
 
     text-transform: uppercase !important;
-    color: #333 !important;
- border: .1rem solid gray !important;
+    color: #c96 !important;
+    border: 1px solid #c96 !important;
+    background-color: transparent !important;
     margin-left: 2rem !important;
     margin-right: 2rem !important;
     padding-top: .8rem !important;
     padding-bottom: .8rem !important;
-   background-color: transparent !important;
+ 
     position:absolute !important;
     bottom: 0 !important;
    
@@ -66,7 +67,7 @@
     color: white !important;
     background-color: #c96 !important;
     transition: all .4s ease-in-out !important;
-    border:none !important
+    border:1px solid #c96 !important
 
 }
 
