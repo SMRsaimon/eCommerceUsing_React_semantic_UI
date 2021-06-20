@@ -26,7 +26,7 @@ const AddedProductDetails = ({ product }) => {
 
   return (
     <Grid className={"added-single-product-container"}>
-        <Grid.Column className={"close-icon-container"} textAlign={"right"} computer={16}>
+        <Grid.Column className={"close-icon-container"} textAlign={"right"} computer={15}>
         <Icon
             onClick={() => dispatch(removeFromCart(id))}
             className={"product-remove-icon"}

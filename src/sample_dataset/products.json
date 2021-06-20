@@ -64,7 +64,7 @@
             "title": "Google Play Gift Cards $5",
             "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
             "product_img": "https://images.pexels.com/photos/5632364/pexels-photo-5632364.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260",
-            "discount": 0,
+            "discount": 3,
             "price": 5,
             "categories": [2, 5],
             "created_at": 1513725172795,

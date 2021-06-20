@@ -71,7 +71,7 @@ const AddedCartProducts = () => {
             <AddedProductDetails key={pd.key} product={pd} />
           ))}
         </Grid.Column>
-        <Grid.Column mobile={16} tablet={8} computer={6} floated="right">
+        <Grid.Column style={{marginLeft:"auto", marginRight:"auto"}} mobile={16} tablet={8} computer={6} floated="right">
             {state.cart.length !== 0 && 
            <PriceCalculation
            totalDiscount={totalDiscount}

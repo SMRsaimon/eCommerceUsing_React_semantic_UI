@@ -1,6 +1,8 @@
 .added-single-product-container{
     margin-bottom: 30px !important;
     background-color: rgb(238, 233, 233);
+    
+   
 }
 .close-icon-container{
 display: inline-block !important;
@@ -30,6 +32,12 @@ width: 20px !important;
     .added-single-product-img{
        height: 160px !important;
        margin: 0 auto !important;
+    }
+    .added-single-product-container{
+       
+       
+        width: 90% !important;
+        margin:15px  auto !important;
     }
 
 

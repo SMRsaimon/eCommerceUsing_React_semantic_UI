@@ -17,7 +17,8 @@ console.log(state.products.products)
   return (
     <>
       <Menu style={{ background: "rgb(236 230 230)" }} tabular attached="top">
-        <Menu.Item position="left" name="Logo" />
+        <Menu.Item    as={Link}
+            to="/home"  position="left" name="Logo" />
         <Menu.Menu>
           <Menu.Item
             as={Link}
