@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import {
   Button,
-  Card,
+
   Container,
   Grid,
   Header,
@@ -17,12 +17,12 @@ import {
 import "./AddedProductDetails.css";
 
 const AddedProductDetails = ({ product }) => {
-  const { product_img, discount, id, title, description, price, quentity } =
+  const { product_img, discount, id, title, price, quentity } =
     product;
 
   let productPrice = price * quentity;
 
-  const { state, dispatch } = useContext(globalContext);
+  const { dispatch } = useContext(globalContext);
 
   return (
     <Grid className={"added-single-product-container"}>
@@ -34,12 +34,15 @@ const AddedProductDetails = ({ product }) => {
           />
       </Grid.Column>
       <Grid.Column textAlign={"center"} mobile={16} tablet={4} computer={4}>
+        <Container>
         <Image
           className={"added-single-product-img"}
           src={product_img}
           size="medium"
           rounded
         />
+          </Container>
+       
       </Grid.Column>
       <Grid.Column textAlign={"center"} mobile={16} tablet={6} computer={6}>
         <Header as={"h3"}> {title}</Header>

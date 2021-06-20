@@ -1,4 +1,4 @@
-import React, { useContext, useEffect } from "react";
+import React, { useContext } from "react";
 import { Link, useHistory } from "react-router-dom";
 import {
   Button,
@@ -12,12 +12,12 @@ import {
 import { globalContext } from "../../../App";
 import {
   addToCart,
-  getDataFromLocalStorage,
+ 
 } from "../../../Reducer/actions/CartAction";
 import "./Cart.css";
 
 export const Cart = ({ products, ProductDetails }) => {
-  const { product_img, discount, id, title, description, price } = products;
+  const { product_img, discount, id, title, price } = products;
 
   const history=useHistory()
 

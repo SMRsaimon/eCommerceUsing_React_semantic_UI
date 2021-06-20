@@ -12,13 +12,12 @@ import {
 import { globalContext } from "../../../../App";
 import {
   addToCart,
-  Decrement,
-  Increment,
+  
 } from "../../../../Reducer/actions/CartAction";
 const ProductDetailsCard = ({ product }) => {
   const { state, dispatch } = useContext(globalContext);
 
-  const { product_img, id, title, description, price, reviews, quentity } =
+  const { product_img, id, title, description, price, reviews } =
     product;
   return (
     <>

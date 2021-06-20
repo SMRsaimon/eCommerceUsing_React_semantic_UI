@@ -1,11 +1,11 @@
 import React, { useContext, useState } from "react";
 import { Link } from "react-router-dom";
-import { Button, Icon, Label, Menu } from "semantic-ui-react";
+import { Button, Icon, Menu } from "semantic-ui-react";
 import { globalContext } from "../../App";
 import "./Navigation.css";
 
 const Navigation = () => {
-  const { state, dispatch } = useContext(globalContext);
+  const { state } = useContext(globalContext);
 
   const [activeItem, setActiveItem] = useState("home");
 console.log(state.products.products)
@@ -47,10 +47,7 @@ console.log(state.products.products)
         </Menu.Item>
 
         <Menu.Item>
-          {/* <Button color="red" basic icon>
-            <Icon name="log out"></Icon>
-            Logout
-          </Button> */}
+      
         </Menu.Item>
       </Menu>
     </>

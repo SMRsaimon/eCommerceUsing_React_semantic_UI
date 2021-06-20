@@ -32,6 +32,7 @@ width: 20px !important;
     .added-single-product-img{
        height: 160px !important;
        margin: 0 auto !important;
+       width: 250px !important;
     }
     .added-single-product-container{
        
@@ -39,6 +40,6 @@ width: 20px !important;
         width: 90% !important;
         margin:15px  auto !important;
     }
-
+    
 
 }

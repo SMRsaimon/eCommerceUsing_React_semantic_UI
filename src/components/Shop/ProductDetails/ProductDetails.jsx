@@ -1,8 +1,7 @@
 import React, { useContext } from "react";
 import { useParams } from "react-router-dom";
-import { Button, Comment, Container, Form, Header } from "semantic-ui-react";
+import { Comment, Container, Header } from "semantic-ui-react";
 import { globalContext } from "../../../App";
-import { Cart } from "../Cart/Cart";
 import ProductsComments from "./ProductComments/ProductsComments";
 import "./ProductDetails.css";
 import ProductDetailsCard from "./ProductDetailsCard/ProductDetailsCard";
@@ -15,19 +14,16 @@ const ProductDetails = () => {
 
   return (
     <Container className={"product-details-container"}>
-      <ProductDetailsCard  product={product} />
+      <ProductDetailsCard product={product} />
 
       <Comment.Group>
         <Header as="h3" dividing>
           Comments
         </Header>
-
         {product.reviews.length > 0 &&
           product.reviews.map((review) => (
             <ProductsComments comments={review} />
           ))}
-
-       
       </Comment.Group>
     </Container>
   );
