@@ -52,15 +52,15 @@ const AddedCartProducts = () => {
           {state.cart.length !== 0 && (
             <Container textAlign="right">
               <Button color={"red"} onClick={hendelCartClear}>
-                {" "}
-                Clear Cart{" "}
+               
+                Clear Cart
               </Button>
             </Container>
           )}
 
           <Container className={"AddedCartProducts-header"}>
             <Container textAlign="left">
-              My Cart ({state.cart.length}){" "}
+              My Cart ({state.cart.length})
             </Container>
             <Container className={"header-product-price"} textAlign="right">
               Products Price: ${productPrice}

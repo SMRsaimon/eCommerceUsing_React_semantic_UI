@@ -13,7 +13,6 @@ console.log(state.products.products)
     setActiveItem(name);
   };
 
-  console.log(state.cart)
 
   return (
     <>

@@ -30,7 +30,7 @@ const PriceCalculation = ({totalDiscount, productPrice}) => {
       open={open}
       onClose={() => setOpen(false)}
       onOpen={() => setOpen(true)}
-      trigger={<Button primary  >Show Modal</Button>}
+      trigger={<Button primary  >Process Checkout </Button>}
     >
       <Modal.Header>Thank you!</Modal.Header>
       <Modal.Content>

@@ -1,5 +1,5 @@
 import React, { useContext, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 import {
   Button,
   Card,
@@ -19,12 +19,20 @@ import "./Cart.css";
 export const Cart = ({ products, ProductDetails }) => {
   const { product_img, discount, id, title, description, price } = products;
 
+  const history=useHistory()
+
   const { dispatch } = useContext(globalContext);
   const center = {
     display: "flex",
     justifyContent: "center",
   };
+const hendelProductsDetails=(id)=>{
 
+  history.push(`/product-details/${id}`)
+
+
+
+}
   return (
     <>
       <Grid.Column
@@ -37,11 +45,11 @@ export const Cart = ({ products, ProductDetails }) => {
         <Card className={"Shop-card-container"}>
           <Grid>
             <Grid.Column width={16} textAlign={"center"}>
-              <Image style={{ height: 200, width: "100%" }} src={product_img} />
+              <Image onClick={()=>hendelProductsDetails(id)} className={"shop-card-image"}   style={{ height: 200, width: "100%" }} src={product_img} />
             </Grid.Column>
 
             <Grid.Column width={16}>
-              <Container
+        <Container
                 className={"shop-view-details-button"}
                 as={Link}
                
@@ -50,11 +58,11 @@ export const Cart = ({ products, ProductDetails }) => {
                 width={16}
               >
                 Quick View
-              </Container>
+              </Container> 
 
-              <Header as={Link}
+              <Header 
                
-               to={`/product-details/${id}`} className={"shop_page_product_title"} >
+               onClick={()=>hendelProductsDetails(id)} className={"shop_page_product_title"} >
                 {title}
               </Header>
             </Grid.Column>
@@ -65,7 +73,7 @@ export const Cart = ({ products, ProductDetails }) => {
             </Grid.Column>
             {
                   discount>0 &&  <Grid.Column className={"discount-container"} width={10}>
-                  <Header color={"blue"} as="h3">
+                  <Header style={{marginLeft: "12px"}} color={"blue"} as="h3">
                   Discount: {discount}%
                   </Header>
                 </Grid.Column>

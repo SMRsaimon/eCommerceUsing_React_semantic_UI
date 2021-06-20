@@ -27,16 +27,7 @@ const ProductDetails = () => {
             <ProductsComments comments={review} />
           ))}
 
-        {/* <Form reply>
-          <Form.TextArea name="comment" />
-          <Button
-            type="submit"
-            content="Add Comment"
-            labelPosition="left"
-            icon="edit"
-            primary
-          />
-        </Form> */}
+       
       </Comment.Group>
     </Container>
   );
